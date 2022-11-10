@@ -37,6 +37,8 @@ body {
             background-color: #f6f6f6;
             margin: 8px 0;
             display: inline-block;
+            animation-name: movimiento;
+            animation-duration: 2s;
         }
 
 
@@ -44,7 +46,7 @@ body {
 }
 
 .submit {
-    width: 100%;
+    width: 40%;
     padding: 8px 16px;
     margin-top: 32px;
     border: 1px solid #000;
@@ -54,37 +56,13 @@ body {
     background-color: rgb(172, 142, 142);
 }
 
-textarea:hover{
-    border-color: #ffff00;
-   transform: scale(20deg);
-   transform:translatey(20px);
+.submit:hover {
+    background-color: rgb(16, 2, 2);
+    transform: translatex(150px);
+    transition-duration: 1s;
+
 }
 
-input:hover {
-    cursor: pointer; 
-
- transform:scale(90%);
-}
-
-
-//input :invalid {
-// animation-name:shake;
-//animation-duration: 3s;
-//animation-timing-function: ease-in;
-//}
-@keyframes shake {
-    25% {
-        transition: translatex(4px)
-    }
-
-    50% {
-        transition: translatex(-4px)
-    }
-
-    75% {
-        transition: translatex(4px)
-    }
-}
 
 .tarea {
     width: 100%;
@@ -97,8 +75,37 @@ input:hover {
     display: block;
 }
 
-.form :hover {
-    background-color: black;
+textarea:hover {
+    transition-duration:2s;  
+    transform: scale(20deg);
+    transform: translatey(20px);
+    background-color:rgb(200, 200, 239) ;
+}
+
+input:hover {
+    cursor: pointer;
+    background-color: rgb(236, 10, 10);
     border-color: aqua;
+
+}
+
+
+
+
+
+
+
+@keyframes movimiento {
+    25% {
+        transition: translatex(4px);
+
     }
-    
+
+    50% {
+        transition: translatex(-4px);
+    }
+
+    75% {
+        transition: translatex(4px)
+    }
+}
