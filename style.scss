@@ -57,7 +57,7 @@ body {
 
 .submit:hover {
     background-color: rgb(16, 2, 2);
-    transform: translatex(150px);
+    transform: translatex(200px);
     transition-duration: 1ms;
     
 }
@@ -119,18 +119,7 @@ form:hover {
     transition-duration: 1s;
 }
 
-
-@keyframes movimientos {
-    25% {
-        transition:translatex(4px);
-
-    }
-
-    50% {
-        transition: translatex(-4px);
-    }
-
-    75% {
-        transition: translatex(4px)
-    }
+.propiedad{
+    text-align: center;
+    margin-top: 20%;
 }
