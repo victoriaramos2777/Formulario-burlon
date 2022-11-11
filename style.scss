@@ -15,7 +15,7 @@ body {
 }
 
 .form {
-    width: 300px;
+    width: 50%;
     padding: 16px;
     border-radius: 10px;
     margin: auto;
@@ -25,20 +25,19 @@ body {
 
 
     &__label {
-        width: 72px;
+        width: 30%;
         font-weight: bold;
         display: inline-block;
 
         &__item {
-            width: 180px;
+            width: 66%;
             padding: 3px 10px;
             border: 1px solid #f6f6f6;
             border-radius: 3px;
             background-color: #f6f6f6;
             margin: 8px 0;
             display: inline-block;
-            animation-name: movimiento;
-            animation-duration: 2s;
+            
         }
 
 
@@ -59,10 +58,34 @@ body {
 .submit:hover {
     background-color: rgb(16, 2, 2);
     transform: translatex(150px);
-    transition-duration: 1s;
+    transition-duration: 1ms;
+    
+}
+.form__label__item:hover{
+    transition-duration:1s; 
+     transform: translate(20px);
 
+   
 }
 
+input:focus{
+    animation: shake .3s;
+    animation-iteration-count: infinite;
+    border: 1px solid red;
+    outline: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg); 
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 .tarea {
     width: 100%;
@@ -76,28 +99,30 @@ body {
 }
 
 textarea:hover {
-    transition-duration:2s;  
-    transform: scale(20deg);
+    transition-duration:1s;  
     transform: translatey(20px);
-    background-color:rgb(200, 200, 239) ;
-}
+    background-color:rgb(4, 4, 85) ;
+    
+ }
+
 
 input:hover {
     cursor: pointer;
     background-color: rgb(236, 10, 10);
     border-color: aqua;
+    
+}
 
+form:hover {
+    background-color: #ffff00;
+    transform: rotate(360deg);
+    transition-duration: 1s;
 }
 
 
-
-
-
-
-
-@keyframes movimiento {
+@keyframes movimientos {
     25% {
-        transition: translatex(4px);
+        transition:translatex(4px);
 
     }
 
